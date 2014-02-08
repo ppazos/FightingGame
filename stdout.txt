@@ -1,0 +1,19 @@
+keyName: up
+keyName: down
+keyName: left
+keyName: right
+keyName: right ctrl
+keyName: right alt
+IP1 cargado con éxito
+Teclas Cargadas: 273 274 276 275 305 307 
+
+keyName: u
+keyName: j
+keyName: h
+keyName: k
+keyName: m
+keyName: ,
+IP2 cargado con éxito
+Teclas Cargadas: 117 106 104 107 109 44 
+
+average FPS: 272.911

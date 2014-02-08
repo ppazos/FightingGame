@@ -1,0 +1,7 @@
+keys=6
+up
+down
+left
+right
+right ctrl
+right alt

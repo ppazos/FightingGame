@@ -1,0 +1,77 @@
+# Project: sfv05
+# Makefile created by Dev-C++ 4.9.9.0
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = sfv05_private.res
+OBJ  = main.o SDL_prim.o colision.o d_fighter.o gen_rectangle.o hit.o input_player.o player.o rectangle.o s_fighter.o setup.o vector_fighter.o vector_hit.o game_ops.o font/SFont.o vector_SDL_Surf.o $(RES)
+LINKOBJ  = main.o SDL_prim.o colision.o d_fighter.o gen_rectangle.o hit.o input_player.o player.o rectangle.o s_fighter.o setup.o vector_fighter.o vector_hit.o game_ops.o font/SFont.o vector_SDL_Surf.o $(RES)
+LIBS =  -L"C:/DEV-CPP/lib" -L"C:/Dev-Cpp/lib/gcc-lib/mingw32/3.3.1" -mwindows -lmingw32 -lSDLmain -lSDL -lSDL_image -liberty  
+INCS =  -I"C:/DEV-CPP/include"  -I"C:/Dev-Cpp/include/SDL"  -I"C:/Dev-Cpp/include/GL" 
+CXXINCS =  -I"C:/DEV-CPP/include/c++/3.3.1"  -I"C:/DEV-CPP/include/c++/3.3.1/mingw32"  -I"C:/DEV-CPP/include/c++/3.3.1/backward"  -I"C:/DEV-CPP/lib/gcc-lib/mingw32/3.3.1/include"  -I"C:/DEV-CPP/include"  -I"C:/Dev-Cpp/include/SDL"  -I"C:/Dev-Cpp/include/GL" 
+BIN  = sfv05.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS) -I"C:\DEV-CPP\\include\SDL" -Dmain=SDL_main  
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before sfv05.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "sfv05.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+SDL_prim.o: SDL_prim.c
+	$(CPP) -c SDL_prim.c -o SDL_prim.o $(CXXFLAGS)
+
+colision.o: colision.cpp
+	$(CPP) -c colision.cpp -o colision.o $(CXXFLAGS)
+
+d_fighter.o: d_fighter.cpp
+	$(CPP) -c d_fighter.cpp -o d_fighter.o $(CXXFLAGS)
+
+gen_rectangle.o: gen_rectangle.cpp
+	$(CPP) -c gen_rectangle.cpp -o gen_rectangle.o $(CXXFLAGS)
+
+hit.o: hit.cpp
+	$(CPP) -c hit.cpp -o hit.o $(CXXFLAGS)
+
+input_player.o: input_player.cpp
+	$(CPP) -c input_player.cpp -o input_player.o $(CXXFLAGS)
+
+player.o: player.cpp
+	$(CPP) -c player.cpp -o player.o $(CXXFLAGS)
+
+rectangle.o: rectangle.cpp
+	$(CPP) -c rectangle.cpp -o rectangle.o $(CXXFLAGS)
+
+s_fighter.o: s_fighter.cpp
+	$(CPP) -c s_fighter.cpp -o s_fighter.o $(CXXFLAGS)
+
+setup.o: setup.cpp
+	$(CPP) -c setup.cpp -o setup.o $(CXXFLAGS)
+
+vector_fighter.o: vector_fighter.cpp
+	$(CPP) -c vector_fighter.cpp -o vector_fighter.o $(CXXFLAGS)
+
+vector_hit.o: vector_hit.cpp
+	$(CPP) -c vector_hit.cpp -o vector_hit.o $(CXXFLAGS)
+
+game_ops.o: game_ops.cpp
+	$(CPP) -c game_ops.cpp -o game_ops.o $(CXXFLAGS)
+
+font/SFont.o: font/SFont.c
+	$(CPP) -c font/SFont.c -o font/SFont.o $(CXXFLAGS)
+
+vector_SDL_Surf.o: vector_SDL_Surf.cpp
+	$(CPP) -c vector_SDL_Surf.cpp -o vector_SDL_Surf.o $(CXXFLAGS)
+
+sfv05_private.res: sfv05_private.rc 
+	$(WINDRES) -i sfv05_private.rc -I rc -o sfv05_private.res -O coff 

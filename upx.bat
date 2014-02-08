@@ -1,0 +1,1 @@
+upx -9 -o WR.exe sfv05.exe

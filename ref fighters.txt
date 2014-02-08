@@ -1,0 +1,41 @@
+fighters=3
+
+[ Fighter 1 Stuff ]
+name=Roberto
+id=0
+spd=3
+width=25
+height_standing=60
+height_crowched=40
+energy=99.0
+hits=2
+p 0 200 10 // tipo id dur dmg 
+15 10 50 7 0.0 //golpe normal x y w h m (info genrect)
+15 10 50 7 1.0 //saltando
+15 10 50 7 0.0 //agachado
+
+k 1 500 15 14 45 45 5 -1.0
+
+[ Fighter 2 Stuff ]
+name=Carlitos
+id=1
+spd=2
+width=30
+height_standing=65
+height_crowched=43
+energy=99.0
+hits=2
+p 0 400 10 14 10 25 5 0.0
+k 1 700 15 14 45 45 5 -1.0
+
+[ Fighter 2 Stuff ]
+name=Lauchita
+id=2
+spd=3
+width=23
+height_standing=52
+height_crowched=28
+energy=99.0
+hits=2
+p 0 400 10 14 10 25 5 0.0
+k 1 700 15 14 45 45 5 -1.0
